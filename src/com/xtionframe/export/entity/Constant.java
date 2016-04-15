@@ -41,4 +41,6 @@ public class Constant {
 	
 	public static final String PER_WRITE_INTO_EXCEL = "perWriteIntoExcel";
 	
+	public static final String DATA_IN_THE_MEMORY = "dataInTHeMemory";
+	
 }

@@ -120,7 +120,8 @@ public class ExportTask implements Runnable {
 						File filee = POIUtil.getStream(filePath, this.titles);
 						fis = new FileInputStream(filee);
 						XSSFWorkbook wbb = new XSSFWorkbook(fis);
-						wb = new SXSSFWorkbook(wbb,1000);
+						wb = new SXSSFWorkbook(wbb,Integer.parseInt(PropertiesUtil.getPropertyValue("export.properties", Constant.PAGE_COUNT,"1000")));
+						wb.setCompressTempFiles(true);
 					}
 					
 					
